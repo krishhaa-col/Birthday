@@ -1,0 +1,87 @@
+body {
+  background-color: #ffe6f0;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ff3399;
+}
+
+.countdown {
+  font-size: 1.5em;
+  margin: 20px;
+  color: #ff3399;
+}
+
+.slideshow-container {
+  max-width: 600px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.slides {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ff66cc;
+}
+
+.message {
+  margin-top: 30px;
+  font-size: 1.2em;
+  color: #333;
+  padding: 0 20px;
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  transform: rotate(45deg);
+  animation: float 5s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(45deg);
+    opacity: 0;
+  }
+}
